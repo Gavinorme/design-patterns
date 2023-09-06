@@ -1,5 +1,8 @@
 package strategy;
-
+/**
+ * A football coach
+ * @author Gavin Orme
+ */
 public class Player 
 {
     private String firstName;
@@ -9,7 +12,12 @@ public class Player
     protected offenseBehavior OffenseBehavior;
     protected defenseBehavior DefenseBehavior;
 
-
+/**
+ * Creates a player name and whether they are on offense or not
+ * @param firstName grabs the first name of the seahawks player
+ * @param lastName grabs the last name of the seahawks player
+ * @param offense determines if the seahawks players are on offense or defense
+ */
 public Player(String firstName, String lastName, boolean offense)
 {
     this.firstName = firstName;
@@ -25,9 +33,10 @@ public Player(String firstName, String lastName, boolean offense)
     public void setDefenseBehavior()
     {  
     }
+    
     /**
-     * 
-     * @return
+     * Creates string represenations of the plays on the field
+     * @return A string representation of if the offense is playing or not  
      */
     public String play()
     {
@@ -59,6 +68,11 @@ public Player(String firstName, String lastName, boolean offense)
     {
         offense = false;
     }
+    
+    /**
+     * Creates a string that displays the player's name 
+     * @return A string representation of the name of the player
+     */
     public String toString()
     {
        return(firstName+" "+lastName+"");
