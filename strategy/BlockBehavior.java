@@ -12,12 +12,13 @@ public class BlockBehavior implements defenseBehavior
 {
     public String play()
     {
-        return("Block a " + arr[select]);
+        return "Block a " + blocks+rand.nextInt(blocks.length);
     }
 
-    String [] arr = {"kick", "punt", "pass", "catch"};
+    
     Random rand = new Random();
-    int select = rand.nextInt(arr.length);
+    private String[] blocks = {"kick", "punt", "pass", "catch"};
+
 
 }
 

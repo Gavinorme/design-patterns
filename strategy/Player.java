@@ -23,8 +23,7 @@ public Player(String firstName, String lastName, boolean offense)
     this.firstName = firstName;
     this.lastName = lastName;
     this.offense = offense;
-    setDefenseBehavior();
-    setOffenseBehavior();
+    
 }  
 
     public void setOffenseBehavior()
@@ -40,6 +39,8 @@ public Player(String firstName, String lastName, boolean offense)
      */
     public String play()
     {
+        setDefenseBehavior();
+        setOffenseBehavior();
         if(this.offense)
         {
         if(offense && OffenseBehavior != null)
@@ -63,7 +64,9 @@ public Player(String firstName, String lastName, boolean offense)
         }
         } 
     }
-     
+    public abstract void setDefenseBehavior();
+    public abstract void setOffenseBehavior(); 
+
     public void turnover()
     {
         offense = false;
