@@ -1,5 +1,8 @@
 package observer;
-
+/**
+ * Round Stats
+ * @author Gavin Orme
+ */
 public class RoundScoreDisplay implements Observer
 {
     private Subject golfer;
@@ -18,6 +21,10 @@ public class RoundScoreDisplay implements Observer
         this.parTotal += par;
     }
 
+    /**
+     * Creates a string representation of the total round strokes and par so that the golfer can see if he is over or under par
+     * @return A string represntation of the par total and strokes total and compares them
+     */
     public String toString()
     {
         if(parTotal == strokesTotal)
