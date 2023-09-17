@@ -1,23 +1,18 @@
 package decorator;
 import java.util.ArrayList;
 
-public abstract class VehicleDecorator 
+public abstract class VehicleDecorator extends Vehicle
 {
-    protected ArrayList<String> lines;
-    private String vehicleString = "";
+    protected ArrayList<String> decoratorLines;
 
-    public VehicleDecorator(ArrayList<String> lines)
+    public VehicleDecorator(ArrayList<String> decoratorLines)
     {
-        for(String line : lines)
-        {
-            vehicleString += line;
-            vehicleString += "\n";
-        }
+        this.decoratorLines = decoratorLines;
     }
 
     protected void integrateDecor(ArrayList<String> decor)
     {
-       getColor();
+       vehicleLines.addAll(decoratorLines);
     }
     
 }

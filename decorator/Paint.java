@@ -5,7 +5,7 @@ public class Paint extends VehicleDecorator{
     
     public Paint(Vehicle vehicle, String color)
     {
-        super(car, getColor());
+        super(color());
     }
 
     private String color()

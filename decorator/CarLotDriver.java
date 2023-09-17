@@ -14,7 +14,8 @@ public class CarLotDriver {
 		System.out.println("\n******* Our new Car *******");
 		System.out.println(car);
 
-		Vehicle decoratedVehicle = new Smile(new Rims(new Paint(car, getColor())));
+		// Vehicle decoratedVehicle = new Smile(new Rims(new Paint(car, getColor())));
+		Vehicle decoratedVehicle = new Rims(car);
 		System.out.println("\n******* We decorated our Car *******\n");
 		System.out.println(decoratedVehicle);
 	}
