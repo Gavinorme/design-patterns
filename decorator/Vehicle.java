@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class Vehicle 
 {
     protected ArrayList<String> lines;
-    private String arrayList;
+    private String vehicleString;
 
     public Vehicle(ArrayList<String> lines) {
         this.lines = lines;
@@ -13,15 +13,14 @@ public abstract class Vehicle
     
     public String toString()
     {
-            for(String i : lines)
+            for(String line : lines)
             {
-                if(lines != null)
-                {
-                System.out.println(arrayList = i.toString()); 
-                }
-                arrayList= i.toString();
+                
+                    vehicleString += line;
+                    vehicleString += "\n";
+                
             }
-            return arrayList;
+            return vehicleString;
     }
     
 }
