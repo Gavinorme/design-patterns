@@ -9,14 +9,15 @@ public abstract class VehicleDecorator extends Vehicle
     protected ArrayList<String> decoratorLines;
     protected Vehicle vehicle;
 
-    public VehicleDecorator(ArrayList<String> decoratorLines)
+    public VehicleDecorator(ArrayList<String> decoratorLines, Vehicle vehicle)
     {
         //this.decoratorLines = decoratorLines;
+        this.vehicle = vehicle;
         integrateDecor(decoratorLines);
     }
 
-    protected void integrateDecor(ArrayList<String> decor)
-    {
-       vehicle.vehicleLines.addAll(decoratorLines);
-    }
+    abstract protected void integrateDecor(ArrayList<String> decor);
+    // {
+    //    vehicle.vehicleLines.addAll(decoratorLines);
+    // }
 }
