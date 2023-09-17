@@ -12,28 +12,26 @@ public class Rims extends VehicleDecorator
      */
     public Rims(Vehicle vehicle)
     {
-        super(FileReader.getLines("decorator/txt/Rims.txt"), vehicle);
+        super(FileReader.getLines("decorator/txt/Rims.txt"), vehicle.vehicleLines);
     }
     protected void integrateDecor(ArrayList<String> decoratorLines) 
     {
 
-        for(int i = 0; i < this.vehicle.vehicleLines.size(); i++) 
+        for(int i = 0; i < this.vehicleLines.size(); i++) 
         {
-        
             String decoratorLine = decoratorLines.get(i);
             StringBuilder newVehicleLine = new StringBuilder(vehicleLines.get(i));
             boolean vehicleLineModified = false;
-        
+
             for(int j = 0; j < decoratorLine.length(); j++) 
             {
                 if(!Character.isWhitespace(decoratorLine.charAt(j))) {
-                       newVehicleLine.setCharAt(j, decoratorLine.charAt(j));
-                       vehicleLineModified = true;
+                        newVehicleLine.setCharAt(j, decoratorLine.charAt(j));
+                        vehicleLineModified = true;
                 }
-        
-             if(vehicleLineModified) {
-                  this.vehicle.vehicleLines.set(i,newVehicleLine.toString());
-              }
+                if(vehicleLineModified) {
+                    this.vehicleLines.set(i,newVehicleLine.toString());
+                }
             }
         }
     }
@@ -41,6 +39,6 @@ public class Rims extends VehicleDecorator
     public String toString()
     {
         integrateDecor(decoratorLines);
-        return vehicle.toString();
+        return super.toString();
     }
 }

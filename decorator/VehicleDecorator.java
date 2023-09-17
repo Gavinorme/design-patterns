@@ -7,12 +7,11 @@ import java.util.ArrayList;
 public abstract class VehicleDecorator extends Vehicle
 {
     protected ArrayList<String> decoratorLines;
-    protected Vehicle vehicle;
 
-    public VehicleDecorator(ArrayList<String> decoratorLines, Vehicle vehicle)
+    public VehicleDecorator(ArrayList<String> decoratorLines, ArrayList<String> vehicleLines)
     {
+        super(vehicleLines);
         this.decoratorLines = decoratorLines;
-        this.vehicle = vehicle;
         //integrateDecor(decoratorLines);
     }
 
