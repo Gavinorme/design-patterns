@@ -1,8 +1,11 @@
 package decorator;
+/**
+ * Painting Car
+ * @author Gavin Orme
+ */
 
-public class Paint extends VehicleDecorator{
-    
-    
+public class Paint extends VehicleDecorator
+{
     public Paint(Vehicle vehicle, String color)
     {
         super(color());
@@ -19,7 +22,6 @@ public class Paint extends VehicleDecorator{
         final String cyan = "\u001B[36m";
         return color();
     }
-
     //before printing car print it red than print it black to reset
     //red at beginning of arraylist and black at the end
 }

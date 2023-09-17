@@ -1,13 +1,17 @@
 package decorator;
 
 import java.util.ArrayList;
-
+/**
+ * Vehicle
+ * @author Gavin Orme
+ */
 public abstract class Vehicle 
 {
     protected ArrayList<String> vehicleLines;
     private String vehicleString = "";
 
-    public Vehicle(ArrayList<String> lines) {
+    public Vehicle(ArrayList<String> lines) 
+    {
         this.vehicleLines = lines;
     }
     
@@ -21,8 +25,7 @@ public abstract class Vehicle
         return vehicleString;
     }
     public Vehicle()
-    {
-        
+    { 
     }
     
 }
