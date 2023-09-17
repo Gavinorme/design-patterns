@@ -48,4 +48,6 @@ public class HoleScoreDisplay implements Observer
             return("Current Hole Stats: Par(" + par + ")" + " Strokes(" + strokes + ")" + " " + (strokes -= par) + ", over par");
         }
     }
+
+    //private String getParMessage
 }
