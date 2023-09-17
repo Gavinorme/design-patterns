@@ -24,8 +24,5 @@ public abstract class Vehicle
         }
         return vehicleString;
     }
-    public Vehicle()
-    { 
-    }
     
 }
