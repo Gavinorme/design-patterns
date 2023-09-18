@@ -34,4 +34,3 @@ public class Paint extends VehicleDecorator
 //Map- maps out one value to another
 //mapping string black to color code
 //each entry in map has key and value (black, color code)
-
