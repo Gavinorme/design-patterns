@@ -6,13 +6,10 @@ import java.util.ArrayList;
  */
 public abstract class VehicleDecorator extends Vehicle
 {
-    protected ArrayList<String> decoratorLines;
-
     public VehicleDecorator(ArrayList<String> vehicleLines)
     {
         super(vehicleLines);
     }
-    // abstract protected void integrateDecor(ArrayList<String> decor);
 
     protected void integrateDecor(ArrayList<String> decoratorLines) 
     {

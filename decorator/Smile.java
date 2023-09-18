@@ -11,8 +11,7 @@ public class Smile extends VehicleDecorator
     public Smile(Vehicle vehicle)
     {
         super(vehicle.vehicleLines);
-        decoratorLines = FileReader.getLines("decorator/txt/Smile.txt");
-        integrateDecor(decoratorLines);
+        integrateDecor(FileReader.getLines("decorator/txt/Smile.txt"));
     }
         
     public String toString()
