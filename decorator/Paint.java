@@ -1,6 +1,7 @@
 package decorator;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * Painting Car
@@ -9,12 +10,34 @@ import java.util.ArrayList;
 
 public class Paint extends VehicleDecorator
 {
+    private String colorCode;
+    private Map<String, String> colorMap = Map.of(
+        "black", "\u001B[0m",
+        "red", "\u001B[31m",
+        "green", "\u001B[32m",
+        "yellow", "\u001B[33m",
+        "blue","\u001B[34m",
+        "purple", "/u001B[35m",
+            "cyan", "\u001B[36m");
     public Paint(Vehicle vehicle, String color)
     {
-        super(null,vehicle.vehicleLines);
+        super(vehicle.vehicleLines);
+        colorCode = colorMap.get(color);
+    }
+    public String toString()
+    {
+        System.out.println(colorCode);
+        return super.toString();
     }
 
-    private String colorMap;
+
+   
+
+
+
+
+
+    
     private String lines;
     private void colorVehicle(String color)
     {
@@ -43,9 +66,6 @@ public class Paint extends VehicleDecorator
     //before printing car print it red than print it black to reset
     //red at beginning of arraylist and black at the end
 
-    @Override
-    protected void integrateDecor(ArrayList<String> decor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'integrateDecor'");
-    }
+    
+    
 }
