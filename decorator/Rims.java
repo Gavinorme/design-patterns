@@ -15,9 +15,4 @@ public class Rims extends VehicleDecorator
         super(vehicle.vehicleLines);
         integrateDecor(FileReader.getLines("decorator/txt/Rims.txt"));
     }
-    
-    public String toString()
-    {
-        return super.toString();
-    }
 }
