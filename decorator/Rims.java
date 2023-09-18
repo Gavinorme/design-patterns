@@ -38,7 +38,7 @@ public class Rims extends VehicleDecorator
         
     public String toString()
     {
-        integrateDecor(decoratorLines);
+        //integrateDecor(decoratorLines);
         return super.toString();
     }
 }

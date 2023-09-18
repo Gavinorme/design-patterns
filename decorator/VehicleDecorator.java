@@ -12,11 +12,7 @@ public abstract class VehicleDecorator extends Vehicle
     {
         super(vehicleLines);
         this.decoratorLines = decoratorLines;
-        //integrateDecor(decoratorLines);
+        integrateDecor(decoratorLines);
     }
-
     abstract protected void integrateDecor(ArrayList<String> decor);
-    // {
-    //    vehicle.vehicleLines.addAll(decoratorLines);
-    // }
 }

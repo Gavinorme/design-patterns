@@ -8,7 +8,21 @@ public class Paint extends VehicleDecorator
 {
     public Paint(Vehicle vehicle, String color)
     {
-        super(color, vehicle);
+        super(lines, vehicle);
+    }
+
+    private String colorMap;
+    private String lines;
+    private void colorVehicle(String color)
+    {
+        if(colorMap.contains(color.toLowerCase()))
+        {
+            final String colorCode = colorMap.get(color.toLowerCase());
+            String firstLine = lines.get(0);
+            lines.set(0, colorCode + firstLine);
+            String lastLine = lines.get(lines.size()-1);
+            lines.set(lines.size()-1,lastLine+TEXT_RESET);
+        }
     }
 
     private String color()
@@ -20,6 +34,7 @@ public class Paint extends VehicleDecorator
         final String blue = "\u001B[34m";
         final String purple = "/u001B[35m";
         final String cyan = "\u001B[36m";
+        final String RESET = "\033[0m";
         return color();
     }
     //before printing car print it red than print it black to reset
