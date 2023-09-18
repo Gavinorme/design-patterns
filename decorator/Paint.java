@@ -18,6 +18,11 @@ public class Paint extends VehicleDecorator
         "blue","\u001B[34m",
         "purple", "\u001B[35m",
             "cyan", "\u001B[36m");
+    /**
+     * Grabs color from the color map and changes the color of the car
+     * @param vehicle This is the car printed out
+     * @param color This changes the color of the car
+     */
     public Paint(Vehicle vehicle, String color)
     {
         super(vehicle.vehicleLines);

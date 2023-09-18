@@ -7,8 +7,8 @@ import java.util.ArrayList;
 public class Rims extends VehicleDecorator 
 {
     /**
-     * 
-     * @param vehicle
+     * This reads the smile.txt and adds the rims to the car
+     * @param vehicle This is the car that is printed out
      */
     public Rims(Vehicle vehicle)
     {

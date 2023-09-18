@@ -8,6 +8,10 @@ import java.util.ArrayList;
  */
 public class Smile extends VehicleDecorator
 {
+    /**
+     * This reads the smile.txt and adds the smile to the car
+     * @param vehicle This is the car that is printed out
+     */
     public Smile(Vehicle vehicle)
     {
         super(vehicle.vehicleLines);
