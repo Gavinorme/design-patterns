@@ -1,4 +1,7 @@
 package decorator;
+
+import java.util.ArrayList;
+
 /**
  * Painting Car
  * @author Gavin Orme
@@ -8,21 +11,21 @@ public class Paint extends VehicleDecorator
 {
     public Paint(Vehicle vehicle, String color)
     {
-        super(lines, vehicle);
+        super(null,vehicle.vehicleLines);
     }
 
     private String colorMap;
     private String lines;
     private void colorVehicle(String color)
     {
-        if(colorMap.contains(color.toLowerCase()))
-        {
-            final String colorCode = colorMap.get(color.toLowerCase());
-            String firstLine = lines.get(0);
-            lines.set(0, colorCode + firstLine);
-            String lastLine = lines.get(lines.size()-1);
-            lines.set(lines.size()-1,lastLine+TEXT_RESET);
-        }
+        // if(colorMap.contains(color.toLowerCase()))
+        // {
+        //     final String colorCode = colorMap.get(color.toLowerCase());
+        //     String firstLine = lines.get(0);
+        //     lines.set(0, colorCode + firstLine);
+        //     String lastLine = lines.get(lines.size()-1);
+        //     lines.set(lines.size()-1,lastLine+TEXT_RESET);
+        // }
     }
 
     private String color()
@@ -39,4 +42,10 @@ public class Paint extends VehicleDecorator
     }
     //before printing car print it red than print it black to reset
     //red at beginning of arraylist and black at the end
+
+    @Override
+    protected void integrateDecor(ArrayList<String> decor) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'integrateDecor'");
+    }
 }

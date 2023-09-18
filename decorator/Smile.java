@@ -10,11 +10,11 @@ public class Smile extends VehicleDecorator
 {
     public Smile(Vehicle vehicle)
     {
-        super(FileReader.getLines("decorator/txt/Smile.txt"), vehicle.vehicleLines);
+        super(vehicle.vehicleLines);
+        decoratorLines = FileReader.getLines("decorator/txt/Smile.txt");
     }
     protected void integrateDecor(ArrayList<String> decoratorLines) 
     {
-
         for(int i = 0; i < this.vehicleLines.size(); i++) 
         {
             String decoratorLine = decoratorLines.get(i);

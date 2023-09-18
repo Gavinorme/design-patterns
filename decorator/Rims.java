@@ -12,7 +12,8 @@ public class Rims extends VehicleDecorator
      */
     public Rims(Vehicle vehicle)
     {
-        super(FileReader.getLines("decorator/txt/Rims.txt"), vehicle.vehicleLines);
+        super(vehicle.vehicleLines);
+        decoratorLines = FileReader.getLines("decorator/txt/Rims.txt");
     }
     protected void integrateDecor(ArrayList<String> decoratorLines) 
     {
@@ -34,8 +35,7 @@ public class Rims extends VehicleDecorator
                 }
             }
         }
-    }
-        
+    }     
     public String toString()
     {
         //integrateDecor(decoratorLines);
