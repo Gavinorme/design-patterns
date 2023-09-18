@@ -25,3 +25,8 @@ public class Paint extends VehicleDecorator
         System.out.println(colorCode);
     }
 }
+
+//Map- maps out one value to another
+//mapping string black to color code
+//each entry in map has key and value (black, color code)
+
