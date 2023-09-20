@@ -64,8 +64,8 @@ public Player(String firstName, String lastName, boolean offense)
         }
         } 
     }
-    public abstract void setDefenseBehavior();
-    public abstract void setOffenseBehavior(); 
+    // public abstract void setDefenseBehavior();
+    // public abstract void setOffenseBehavior(); 
 
     public void turnover()
     {
