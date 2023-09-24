@@ -1,4 +1,8 @@
 package factory;
+/**
+ * Tricycle
+ * @author Gavin Orme
+ */
 
 public class Tricycle extends Bike
 {

@@ -1,4 +1,8 @@
 package factory;
+/**
+ * Strider
+ * @author Gavin Orme
+ */
 
 public class Strider extends Bike
 {

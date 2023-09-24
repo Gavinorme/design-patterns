@@ -1,5 +1,8 @@
 package factory;
-
+/**
+ * Kids Bike
+ * @author Gavin Orme
+ */
 public class KidsBike extends Bike
 {
     public KidsBike()
