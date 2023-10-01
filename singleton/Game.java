@@ -24,6 +24,10 @@ public class Game
 
     private Game() {}
 
+    /**
+     * The getInstance method creates each level of the game
+     * @return Returns game which makes the entire game
+     */
     public static Game getInstance()
     {
         if(game == null)
@@ -36,7 +40,10 @@ public class Game
         return game;
     }
 
-    //grabs anagram from mixing up the txt's using an arraylist and the rand
+    /**
+     * Creates a string representation of randomly getting a question from the array list
+     * @return Returns the string to the left of the dash which is the question
+     */
     public String getQuestion()
     {
         int i = rand.nextInt(8);
@@ -47,7 +54,11 @@ public class Game
 
     //if the userAnswer equals one of the strings on the array list then the user is correct and 
     //score goes up one and after a certain amount the difficulty goes up
-    private int totalAnswers = 0;
+    /**
+     * This is a boolean that adds the user's score if they get the anagram right and subtracts the score if they get it wrong
+     * @param userAnswer This is the user's input
+     * @return Returns if the user's input matches a correct answer in the txt file
+     */
     public boolean isCorrect(String userAnswer)
     {
         boolean isCorrect = currentAnagram.isCorrect(userAnswer);
@@ -67,36 +78,23 @@ public class Game
         {
             level = Difficulty.MEDIUM;
         }
-
         if(correctAnswers == 4) //comparing
         {
             level = Difficulty.MEDIUM;
         }
-     
         if(correctAnswers == 8)
         {
             level = Difficulty.HARD;
         }
-        
         return isCorrect;
     }
 
-    //adds up the user's score so the difficulty can go up
+    /**
+     * 
+     * @return Returns the total score of the amount of anagrams that the user got right and wrong
+     */
     public int getScore()
     {
         return correctAnswers; // add each levels
     }
 }
-
-
-
-
-
-
-//Notes
-//random rand
-//difficulty is based on score
-//easy tied to three
-//
-//get question returns random anagram
-//if correct add to score and factor in difficulty
