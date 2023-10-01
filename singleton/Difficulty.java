@@ -9,6 +9,3 @@ public enum Difficulty {
         this.fileName = fileName;
     }
 }
-
-//Notes
-//
