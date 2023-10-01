@@ -1,5 +1,8 @@
 package singleton;
-
+/**
+ * Anagram Game
+ * @author Gavin Orme
+ */
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,31 +55,28 @@ public class Game
         {
             correctAnswers++;
         }
-        else
-        {
-            isCorrect = false;
-        }
-
         if(isCorrect == false)
         {
             correctAnswers--;
         }
-        
+        if(correctAnswers == 3)
+        {
+            level = Difficulty.EASY;
+        }
+        else if(correctAnswers == 7)
+        {
+            level = Difficulty.MEDIUM;
+        }
+
         if(correctAnswers == 4) //comparing
         {
-            if(level == Difficulty.EASY)
-            {
-                level = Difficulty.MEDIUM;
-                totalAnswers = correctAnswers;
-                
-            }
-        }  
-            if(level == Difficulty.MEDIUM)
-            {
-                level = Difficulty.HARD;
-                correctAnswers = 0;
-                totalAnswers = 8 + correctAnswers;
-            }
+            level = Difficulty.MEDIUM;
+        }
+     
+        if(correctAnswers == 8)
+        {
+            level = Difficulty.HARD;
+        }
         
         return isCorrect;
     }
@@ -84,7 +84,7 @@ public class Game
     //adds up the user's score so the difficulty can go up
     public int getScore()
     {
-        return totalAnswers; // add each levels
+        return correctAnswers; // add each levels
     }
 }
 

@@ -1,5 +1,8 @@
 package singleton;
-
+/**
+ * Questions and Answers
+ * @author Gavin Orme
+ */
 import java.util.ArrayList;
 
 public class Anagram 
