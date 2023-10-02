@@ -11,7 +11,7 @@ public class Anagram
     ArrayList<String> answers;
 
 /**
- * 
+ * This grabs the question and array list of answers from the Anagram class
  * @param question String before the -
  * @param answers String after the -
  */
