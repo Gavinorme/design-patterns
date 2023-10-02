@@ -90,7 +90,7 @@ public class Game
     }
 
     /**
-     * 
+     * Adds up the total of the anagrams the user got right
      * @return Returns the total score of the amount of anagrams that the user got right and wrong
      */
     public int getScore()
