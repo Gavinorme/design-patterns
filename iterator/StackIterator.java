@@ -19,7 +19,6 @@ public class StackIterator implements Iterator {
      */
     public StackIterator(Stack<String> items) {
         this.stackItems = new ArrayList<>(items);
-        // Collections.reverse(stackItems);
     }
 
     /** 
